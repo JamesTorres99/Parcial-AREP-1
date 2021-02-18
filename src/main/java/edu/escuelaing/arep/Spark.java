@@ -15,11 +15,11 @@ public class Spark {
 		connection = new Connection();
 
 		get("/clima", (req, res) -> {
-			String ciudad = req.queryParams("ciudad");
+			String lugar = req.queryParams("lugar");
 			String rta = "";
-			System.out.println(ciudad);
+			System.out.println(lugar);
 
-			rta = getClima(ciudad);
+			rta = getClima(lugar);
 			System.out.println(rta);
 			return rta;
 		});
